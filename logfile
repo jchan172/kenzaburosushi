@@ -1,0 +1,30 @@
+LOG:  database system was shut down at 2013-09-21 16:21:23 PDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 41338) running in data directory "/usr/local/var/postgres/data"?
+FATAL:  database "WillChan" does not exist
+LOG:  incomplete startup packet
+ERROR:  role "WillChan" already exists
+STATEMENT:  CREATE ROLE "WillChan" NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
+	
+ERROR:  role "WillChan" already exists
+STATEMENT:  CREATE ROLE "WillChan" SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+	
+FATAL:  database "WillChan" does not exist
+FATAL:  database "WillChan" does not exist
+FATAL:  database "WillChan" does not exist
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 41338) running in data directory "/usr/local/var/postgres/data"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-09-21 20:25:41 PDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+postgres cannot access the server configuration file "/usr/local/var/postgres/data/postgresql.conf": No such file or directory

@@ -13,20 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20130803235239) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blogentries", force: true do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "blog_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "draft",      default: false
   end
 
   create_table "blogs", force: true do |t|
     t.string   "content"
     t.string   "title"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "draft",      default: false
   end
@@ -35,45 +38,28 @@ ActiveRecord::Schema.define(version: 20130803235239) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.boolean  "draft",      default: false
   end
 
   create_table "projects", force: true do |t|
     t.text     "content"
     t.string   "title"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "draft",      default: false
   end
 
-  create_table "redactor_assets", force: true do |t|
-    t.integer  "user_id"
-    t.string   "data_file_name",               null: false
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.integer  "assetable_id"
-    t.string   "assetable_type",    limit: 30
-    t.string   "type",              limit: 30
-    t.integer  "width"
-    t.integer  "height"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "redactor_assets", ["assetable_type", "assetable_id"], name: "idx_redactor_assetable", using: :btree
-  add_index "redactor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_redactor_assetable_type", using: :btree
-
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "auth_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "string"
     t.string   "password_digest"
+    t.string   "auth_token"
     t.string   "username"
   end
 
