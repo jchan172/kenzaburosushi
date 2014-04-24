@@ -1,29 +1,25 @@
 <% provide(:title, 'Home') %>
 <div class="container-main">
-	<div class="featurette">
-		<%= image_tag asset_path("logo.bmp"), :class => "featurette-image pull-right", 'width' => '500dp', 'align' => 'top' %>
 
-	</div>
 
 	<div id="ei-slider" class="ei-slider">
 	    <ul class="ei-slider-large">
-	        <li>
+	        <li style="opacity: 1;">
 	            <%= image_tag asset_path("1.jpg")%>
 	            <div class="ei-title">
 	                <h2>Creative</h2>
 	                <h3>Geek</h3>
 	            </div>
 	        </li>
-	        <li>...</li>
-	    </ul>
-	    <ul class="ei-slider-thumbs">
-	        <li class="ei-slider-element">Current</li>
-	        <li>
-	            <a href="#">Slide 1</a>
-	            <%image_tag asset_path("1small.jpg") %>
+	        <li style-"opacity: 0;">
+	            <%= image_tag asset_path("logo.bmp")%>
+	            <div class="ei-title">
+	                <h2>Creative</h2>
+	                <h3>Geek</h3>
+	            </div>
 	        </li>
-	        <li>...</li>
 	    </ul>
+
 	</div>
 
 	<hr>
