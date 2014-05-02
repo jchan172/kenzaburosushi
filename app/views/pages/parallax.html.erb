@@ -1,0 +1,128 @@
+<% provide(:title, 'Home') %>
+
+
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="preload">
+  <%= image_tag 'bcg_slide-1.jpg' %>
+  <%= image_tag 'bcg_slide-2.jpg' %>
+  <%= image_tag 'bcg_slide-3.jpg' %>
+  <%= image_tag 'bcg_slide-4.jpg' %>
+</div>
+
+<main>
+
+  <section id="slide-1" class="homeSlide">
+    <div id="skrollr-body" class="bcg">
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h2>Simple parallax scrolling is...</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slide-2">
+    <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-2">
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Fade me in and out</h2>
+          <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Here we are changing the background color from blue to black. Text is fading in at 206 pixels from the bottom and fading out 106 pixels from the top.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slide-2" class="homeSlide">
+    <div class="bcg">
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h2>great for story telling websites.</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slide-3" class="homeSlide">
+    <div class="bcg">
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h2>Now go and create your own story</h2>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="slide-4" class="homeSlide">
+    <div class="bcg">
+      <div class="hsContainer">
+        <div class="hsContent">
+          <h2>and share mine.</h2>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<%= javascript_include_tag "skrollr.min.js" %>
+<%= javascript_include_tag "modernizr-2.7.1.min" %>
+<%= javascript_include_tag "imagesloaded" %>
+<script>
+    /**
+     * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
+     * Want to see more similar demos and tutorials?
+     * Help by spreading the word about Ihatetomatoes blog.
+     * Facebook - https://www.facebook.com/ihatetomatoesblog
+     * Twitter - https://twitter.com/ihatetomatoes
+     * Google+ - https://plus.google.com/u/0/109859280204979591787/about
+     * Article URL: http://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
+     */
+
+    ( function( $ ) {
+
+        // Setup variables
+        $window = $(window);
+        $slide = $('.homeSlide');
+        $body = $('body');
+
+        //FadeIn all sections
+        $body.imagesLoaded( function() {
+            setTimeout(function() {
+
+                // Resize sections
+                adjustWindow();
+
+                // Fade in sections
+                $body.removeClass('loading').addClass('loaded');
+
+            }, 800);
+        });
+
+        function adjustWindow(){
+
+            // Init Skrollr
+
+
+            // Get window size
+            winH = $window.height();
+
+            // Keep minimum height 550
+            if(winH <= 550) {
+                winH = 550;
+            }
+
+            // Resize our slides
+            $slide.height(winH);
+
+            // Refresh Skrollr after resizing our sections
+
+
+        }
+
+    } )( jQuery );
+</script>

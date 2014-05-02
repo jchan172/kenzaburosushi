@@ -11,7 +11,7 @@ ScratchCms::Application.routes.draw do
   #match '/projects/:id/edit_rich' => 'projects#edit_rich'
   #match '/projects/:id/edit_raw' => 'projects#edit_raw'
 
-  root to: 'pages#home'
+  root to: 'pages#skrollr'
 
   match '/about' => 'pages#about', :mode => 'main',    via: 'get'
   match '/error' => 'pages#error',    via: 'get'
