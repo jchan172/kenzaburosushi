@@ -15,9 +15,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: website_base_development
+  database: kenzaburo_dev
   pool: 5
-  username: WillChan
+  username: jchan
+  password: makeitrain
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -40,13 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: website_base_test
+  database: kenzaburo_test
   pool: 5
-  username: WillChan
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: website_base_production
-  pool: 5
-  username: website_base
+  username: jchan
+  password: makeitrain

@@ -1,0 +1,52 @@
+.container-about {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 125px;
+  padding-bottom: 230px;
+}
+
+iframe, object, embed {
+  max-width: 100%;
+}
+
+.responsive-container
+{
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  padding-top: 30px; /* IE6 workaround*/
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-container iframe,
+.responsive-container object,
+.responsive-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 979px) {
+  .container-about {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 125px;
+    padding-bottom: 230px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-about {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 125px;
+    padding-bottom: 230px;
+  }
+}
+
+

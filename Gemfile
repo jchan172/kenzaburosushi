@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'jquery-rails', '3.0.4' # incorporate jquery
-gem 'bootstrap-sass', '2.3.0.1' # Twitter Bootstrap for frontend
+gem 'bootstrap-sass', '3.0.3.0' # Twitter Bootstrap for frontend
 gem 'sass-rails' # integration for sass (frontend stylesheet stuff)
 gem 'coffee-rails' # compiles coffeescript
 gem 'uglifier' # used for minifying javascript

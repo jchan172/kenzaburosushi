@@ -106,7 +106,7 @@ Now you can go into your project directory and create a database
 
 Add a password to user you just created by getting into the psql shell
 
-	sudo -u <shell username> pqsl website_base_development (or whatever you named the database it in previous step)
+	sudo -u <shell username> psql website_base_development (or whatever you named the database it in previous step)
 
 Now that you're in the psql shell, type
 
