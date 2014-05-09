@@ -31,7 +31,8 @@ group :development, :test do
 	gem 'annotate' # adds comments to model showing the schema of the model
 	gem 'hirb' # makes console output nicer to read
 	gem 'localtunnel' # expose your localhost server to the public web
-	gem 'meta_request' # shows information about app requests in browser (remember also need chrome extension)
+	gem 'meta_request' # shows information about a
+  # pp requests in browser (remember also need chrome extension)
 	gem 'railroady' # generates UML diagrams
 end
 
