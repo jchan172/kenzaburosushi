@@ -19,12 +19,12 @@ html, body {
 }
 
 body {
-  background: #eeeeee;
-  background: -webkit-linear-gradient(top, #eeeeee, #cccccc 100%);
-  background: -moz-linear-gradient(top, #eeeeee, #cccccc 100%);
-  background: -o-linear-gradient(top, #eeeeee, #cccccc 100%);
-  background: -ms-linear-gradient(top, #eeeeee, #cccccc 100%);
-  background: linear-gradient(top, #eeeeee, #cccccc 100%);
+  background: #ffffff;
+  background: -webkit-linear-gradient(top, #ffffff, #ffffff 100%);
+  background: -moz-linear-gradient(top, #ffffff, #ffffff 100%);
+  background: -o-linear-gradient(top, #ffffff, #ffffff 100%);
+  background: -ms-linear-gradient(top, #ffffff, #ffffff 100%);
+  background: linear-gradient(top, #ffffff, #ffffff 100%);
   background-attachment:fixed;
 }
 
@@ -67,6 +67,7 @@ h3 {
   color:#333;
   font-size:1.41em;
   margin:1em 0;
+  width: 80%;
 }
 
 h4 {
@@ -106,16 +107,6 @@ h4 {
   background-size: 100%;
 }
 
-#bg2 {
-  z-index:49;
-  background-image:image-url('bcg_slide-3.jpg');
-}
-
-#bg3 {
-  z-index:48;
-  background-image:image-url('bcg_slide-4.jpg');
-}
-
 #foreground {
   width:100%;
   height:100%;
@@ -124,144 +115,27 @@ h4 {
   text-align:center;
 }
 
+.enclosure-first {
+  width:100%;
+  height:60vh;
+  left:0%;
+  margin-top: 160px;
+  margin-bottom: 60px;
+  margin-left:0%;
+  padding:2em;
+  background:#fff;
+  text-align:center;
+}
+
 .enclosure {
   width:100%;
-  height:70vh;
+  height:75vh;
   left:0%;
-  margin-top:160px;
+  margin-bottom:160px;
   margin-left:0%;
   padding:2em;
   background:#fff;
   text-align:center;
-}
-
-#intro {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:160px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  background: image-url('amp.jpg');
-  background-size: 100% 100%;
-}
-
-#intro2 {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:1000px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#intro3 {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:1700px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#intro4 {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:2200px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#intro5 {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:2500px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#intro6 {
-  width:100%;
-  height:70%;
-  left:0%;
-  margin-top:3200px;
-  margin-left:0%;
-  padding:2em;
-  background:#fff;
-  text-align:center;
-
-  -webkit-transform-origin:0 0;
-  -moz-transform-origin:0 0;
-  -ms-transform-origin:0 0;
-  -o-transform-origin:0 0;
-  transform-origin:0 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 #intro .arrows {
@@ -319,5 +193,11 @@ h4 {
 }
 
 .twitter-share-button, .twitter-follow-button {
-  vertical-align:middle;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .enclosure-first {
+    margin-top: 80px;
+  }
 }

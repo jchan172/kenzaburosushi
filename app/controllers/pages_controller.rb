@@ -3,8 +3,12 @@ class PagesController < ApplicationController
   end
 
   def about
+    @about = Project.find_by(:title => 'About')
   end
 
   def error
+  end
+
+  def contact
   end
 end

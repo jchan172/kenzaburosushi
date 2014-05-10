@@ -13,16 +13,16 @@ ScratchCms::Application.routes.draw do
 
   root to: 'pages#skrollr'
 
-  match '/about' => 'pages#about', :mode => 'main',    via: 'get'
-  match '/error' => 'pages#error',    via: 'get'
+  match '/about' => 'pages#about',       via: 'get', :mode => 'main'
+  match '/error' => 'pages#error',       via: 'get'
+  match '/contact' => 'pages#contact',   via: 'get', :mode => 'main'
+  match '/menu' => 'pages#menu',         via: 'get'
 
-  match '/signup',  to: 'users#new',    via: 'get'
-
-  match '/login' => 'sessions#new',    via: 'get'
-  match '/logout' => 'sessions#destroy', via: :delete
-  # match '/dashboard' => 'users#show', :defaults => { :id => -1 },    via: 'get'
+  # Scratch CMS
+  match '/signup' => 'users#new',        via: 'get'
+  match '/login' => 'sessions#new',      via: 'get'
+  match '/logout' => 'sessions#destroy', via: 'delete'
   match '/dashboard' => 'users#show',    via: 'get'
-
   match '/blogs/:id/manage' => 'blogs#manage',    via: 'get'
 
   # The priority is based upon order of creation:

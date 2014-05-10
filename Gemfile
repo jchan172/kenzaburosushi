@@ -25,6 +25,7 @@ gem 'rename' # allows you to rename the Rails project. simply run 'rails g renam
 
 # these gems used both in development and testing
 group :development, :test do
+  gem 'thin'
 	# gem 'sqlite3', '1.3.5' # use sqlite for our development database
 	gem 'rspec-rails', '2.11.0' # use rspec as our testing platform
 	gem 'better_errors' # better interface for showing errors

@@ -1,17 +1,10 @@
 <% if params[:mode] == 'main' %>
-    <% provide(:title, 'About') %>
+    <% provide(:title, @about.title) %>
     <div class="container-about">
 <% else %>
 	<div class="dashboard-content">
 <% end %>
-<%# TODO: create a table with hours %>
-    <div class="responsive-container">
-      <iframe
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAIDcDz57phezG4x6yev_hFjJ38z9h0pKY
-        &q=Ken+Zaburo+Sushi+Kirkland+WA">
-      </iframe>
-    </div>
+<div class="container-content">
+  <h1><%= @about.title %> </h1>
+  <p><%= @about.content.html_safe %></p>
 </div>
