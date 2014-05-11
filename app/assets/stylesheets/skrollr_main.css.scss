@@ -120,8 +120,9 @@ h4 {
   width: 70%;
   left: 50%;
   top: 70%;
-  margin-left: -35%;
-  text-align: center;
+  margin-left: -25%;
+  padding-right: 5px;
+  text-align: left;
   font-size: 150%;
 }
 
@@ -208,6 +209,9 @@ h4 {
 }
 
 @media (max-width: 767px) {
+  #easing {
+    margin-top: 40vh;
+  }
   .enclosure-first {
     margin-top: 80px;
   }
