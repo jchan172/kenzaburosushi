@@ -14,7 +14,7 @@ iframe, object, embed {
   position: relative;
   padding-bottom: 0%; /* 16/9 ratio */
   padding-top: 30px; /* IE6 workaround*/
-  height: 70vh;
+  height: 74vh;
   overflow: hidden;
 }
 
@@ -34,10 +34,10 @@ iframe, object, embed {
     margin-left: auto;
     margin-right: auto;
     padding-top: 125px;
-    padding-bottom: 230px;
+    padding-bottom: 95px;
   }
   .responsive-container {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
@@ -46,12 +46,17 @@ iframe, object, embed {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 125px;
-    padding-bottom: 230px;
+    padding-top: 115px;
+    padding-bottom: 20px;
   }
   .responsive-container {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
+@media (max-width: 450px) {
+  .container-menu {
+    padding-top: 95px;
+  }
+}
 

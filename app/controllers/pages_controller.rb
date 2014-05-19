@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @hours = Project.find_by(:title => 'Hours')
   end
 
   def lunch

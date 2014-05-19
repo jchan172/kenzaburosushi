@@ -1,7 +1,11 @@
-<% provide(:title, 'About') %>
+<% provide(:title, 'Contact') %>
 <div class="container-about">
-<%# TODO: create a table with hours %>
-    <div class="responsive-container">
+    <h2>Hours</h2>
+    <div class="hours">
+      <p><%= @hours.content.html_safe %></p>
+    </div>
+    <h2>Location</h2>
+    <div class="responsive-container" style="height: 58vh;">
       <iframe
       width="600"
       height="450"

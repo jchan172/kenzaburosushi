@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 125px;
+  padding-bottom: 95px;
 }
 
 iframe, object, embed {
@@ -34,7 +35,7 @@ iframe, object, embed {
     margin-left: auto;
     margin-right: auto;
     padding-top: 125px;
-    padding-bottom: 230px;
+    padding-bottom: 95px;
   }
 }
 
@@ -43,8 +44,14 @@ iframe, object, embed {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 125px;
-    padding-bottom: 230px;
+    padding-top: 115px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-about {
+    padding-top: 95px;
   }
 }
 
