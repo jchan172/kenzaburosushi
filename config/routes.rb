@@ -18,6 +18,7 @@ ScratchCms::Application.routes.draw do
   match '/contact' => 'pages#contact',   via: 'get', :mode => 'main'
   match '/lunch' => 'pages#lunch',       via: 'get'
   match '/dinner' => 'pages#dinner',     via: 'get'
+  match '/order' => 'pages#order',       via: 'get'
 
   # Scratch CMS
   match '/signup' => 'users#new',        via: 'get'

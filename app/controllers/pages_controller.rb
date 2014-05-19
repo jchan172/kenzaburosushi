@@ -17,4 +17,8 @@ class PagesController < ApplicationController
 
   def dinner
   end
+
+  def order
+    @order = Project.find_by(:title => 'Online Ordering')
+  end
 end

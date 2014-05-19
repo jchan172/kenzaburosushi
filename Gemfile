@@ -22,6 +22,7 @@ gem 'jbuilder' # gives simple language for declaring JSON structures
 # gem 'smusher' # lossless reduction of images
 gem 'newrelic_rpm' # Heroku add-on for analytics
 gem 'rename' # allows you to rename the Rails project. simply run 'rails g rename:app_to <insert new name>'
+gem 'sprockets', '2.11.0' #trying something as a fix in gemfile
 
 # these gems used both in development and testing
 group :development, :test do
