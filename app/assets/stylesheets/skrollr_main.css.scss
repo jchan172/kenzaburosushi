@@ -126,6 +126,16 @@ h4 {
   font-size: 150%;
 }
 
+#easing1 {
+  margin-top: 50vh;
+  width: 70%;
+  left: 50%;
+  top: 70%;
+  margin-left: -25%;
+  padding-right: 5px;
+  text-align: left;
+  font-size: 150%;
+}
 
 .enclosure-first {
   width:100%;
@@ -186,6 +196,12 @@ h4 {
   z-index:101;
 }
 
+#easing1 {
+  top:10%;
+  width:50%;
+  z-index:101;
+}
+
 .drop {
   background:#09f;
   font-weight:bold;
@@ -211,6 +227,10 @@ h4 {
 @media (max-width: 767px) {
   #easing {
     margin-top: 40vh;
+  }
+  #easing1 {
+    margin-top: 40vh;
+    top: 0%;
   }
   .enclosure-first {
     margin-top: 80px;
