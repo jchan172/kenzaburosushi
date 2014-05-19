@@ -1,17 +1,19 @@
 <% provide(:title, 'Contact') %>
 <div class="container-about">
-    <h2>Hours</h2>
-    <div class="hours">
-      <p><%= @hours.content.html_safe %></p>
-    </div>
-    <h2>Location</h2>
-    <div class="responsive-container" style="height: 58vh;">
-      <iframe
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAIDcDz57phezG4x6yev_hFjJ38z9h0pKY
-            &q=Ken+Zaburo+Sushi+Kirkland+WA">
-      </iframe>
-    </div>
+  <div class="container-content">
+      <h2>Hours</h2>
+      <div class="hours">
+        <p><%= @hours.content.html_safe %></p>
+      </div>
+      <h2>Location</h2>
+      <div class="responsive-container" style="height: 58vh;">
+        <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAIDcDz57phezG4x6yev_hFjJ38z9h0pKY
+              &q=Ken+Zaburo+Sushi+Kirkland+WA">
+        </iframe>
+      </div>
+  </div>
 </div>
