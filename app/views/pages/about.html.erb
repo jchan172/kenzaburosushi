@@ -4,6 +4,12 @@
 <% else %>
 	<div class="dashboard-content">
 <% end %>
+
+<%# make navbar section active %>
+<script>
+    $('#navbar-about').addClass('active');
+</script>
+
 <div class="container-content">
   <h1><%= @about.title %> </h1>
   <p><%= @about.content.html_safe %></p>
