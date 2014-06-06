@@ -39,6 +39,7 @@
   -webkit-transform:rotate(360deg)
 }
 
+// this is for subtle animation. arrow bounces.
 @-webkit-keyframes arrows {
   0% { top:0; }
   10% { top:12%; }
