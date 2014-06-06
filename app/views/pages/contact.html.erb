@@ -1,8 +1,14 @@
 <% provide(:title, 'Contact') %>
 
-<%# make navbar section active %>
 <script>
+  <%# make navbar section active %>
   $('#navbar-contact').addClass('active');
+  <%# show spinner until iframe loads %>
+  $(document).ready(function () {
+      $('#google-location').on('load', function () {
+          $('#spinner').hide();
+      });
+  });
 </script>
 
 <div class="container-about">
@@ -12,8 +18,10 @@
         <p><%= @hours.content.html_safe %></p>
       </div>
       <h2>Location</h2>
+      <%= image_tag 'preloader-white.gif', id: 'spinner', size: '30x30' %>
       <div class="responsive-container" style="height: 58vh;">
         <iframe
+        id="google-location"
         width="600"
         height="450"
         frameborder="0" style="border:0"
