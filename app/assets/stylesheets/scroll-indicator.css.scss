@@ -43,7 +43,7 @@
   -webkit-transform:rotate(360deg)
 }
 
-// this is for subtle animation. arrow bounces after 3 seconds.
+// this is for subtle animation. arrow bounces indefinitely after 3 seconds.
 @-webkit-keyframes arrows {
   0% { top:0; }
   10% { top:12%; }
