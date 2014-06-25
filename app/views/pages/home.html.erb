@@ -1,5 +1,30 @@
+<%# this is javascript for making the scroll indicator fade %>
+<script>
+    //this is where we apply opacity to the arrow
+    $(window).scroll( function(){
+
+    //get scroll position
+    var topWindow = $(window).scrollTop();
+    //multiply by 1.5 to make arrow transparent half-way up the page
+    var topWindow = topWindow * 1.15; // tweaked to 1.15
+
+    //get height of window
+    var windowHeight = $(window).height();
+
+    //set position as percentage of how far the user has scrolled
+    var position = topWindow / windowHeight;
+    //invert the percentage
+    position = 1 - position;
+
+    //define arrow opacity as based on how far up the page the user has scrolled
+    //no scrolling = 1, half-way up the page = 0
+    $('.arrow-wrap').css('opacity', position);
+
+    });
+</script>
+
 <%# Background image %>
-<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-0px -810px;"></div>
+<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-0px -230px;"></div>
 <!--<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>-->
 
 <%# Progress bar at the bottom %>
@@ -8,73 +33,93 @@
 <%# Food photos %>
 
 <div id="foreground" data-0="opacity:1;top:3%;transform-origin:0 0;" data-6000="opacity:1;top:-510%;">
-  <div class="enclosure-first">
-    <h1>sushi</h1>
+  <div id="sushi" class="enclosure-first">
+    <%# sushi/nigiri %>
+
   </div>
 
-  <div class="enclosure">
-    <h1>maki rolls</h1>
-  </div>
+  <%# define a section so that we can place scroll indicator at the top %>
+  <section>
+    <%# this is the scrolling indicator (note that the link to #maki will be covered by easing_wrapper :( ) %>
+    <a class="arrow-wrap" href="#maki">
+      <span class="arrow"></span>
+    </a>
 
-  <div class="enclosure">
-    <h1>bento box</h1>
-  </div>
+    <div id="maki" class="enclosure">
+      <%# maki rolls %>
+    </div>
 
-  <div class="enclosure">
-    <h1>main dishes</h1>
-  </div>
+    <div id="bento" class="enclosure">
+      <%# bento box %>
+    </div>
 
-  <div class="enclosure">
-    <h1>lamb steaks</h1>
-  </div>
+    <div id="entree" class="enclosure">
+      <%# main dishes %>
+    </div>
+
+    <div id="fusion" class="enclosure">
+      <%# lamb steak %>
+    </div>
+  </section>
 </div>
 
 <%# Labels that fly in %>
 
 <div id="easing_wrapper" data-0="opacity:1;" data-300="opacity:0;">
   <div id="easing1" data-0="left:75%" data-800="left:75%;">
-    <h4>We pride ourselves in providing fresh, high quality sushi.</h4>
+    <h4 style="color: #000;">We pride ourselves in providing fresh, high quality sushi.</h4>
   </div>
 </div>
 
 <div id="easing_wrapper" data-0="opacity:1;" data-500="opacity:1;" data-1000="opacity:1;" data-1200="opacity:0;">
   <div id="easing" data-0="left:-50%" data-500="left:35%;">
-      <h4>Sometimes with a touch of creativity, like in our specialty maki rolls.</h4>
+    <h4 style="color: #000;">Sometimes with a touch of creativity, like in our specialty maki rolls.</h4>
   </div>
 </div>
 
 <div id="easing_wrapper" data-0="opacity:1;" data-1300="opacity:1;" data-2100="opacity:1;" data-2300="opacity:0;">
-  <div id="easing" data-0="left:130%" data-1500="left:130%" data-1700="left:75%;">
-    <h4>But that's not all you should come for.</h4>
+  <div id="easing" data-0="left:140%" data-1500="left:140%" data-1700="left:88%;">
+    <h4 style="color: #000;">But that's not all you should come for.</h4>
   </div>
 </div>
 
 <div id="easing_wrapper" data-0="opacity:1;" data-2300="opacity:1;" data-3200="opacity:1;" data-3400="opacity:0;">
   <div id="easing" data-0="left:-50%" data-2500="left:-50%" data-2700="left:35%;">
-    <h4>We have some amazing Thai and Chinese dishes as well.</h4>
+    <h4 style="color: #000;">We have some amazing Thai and Chinese dishes as well.</h4>
   </div>
 </div>
 
 <div id="easing_wrapper" data-0="opacity:1;" data-3500="opacity:1;" data-4400="opacity:1;" data-4600="opacity:0;">
-  <div id="easing" data-0="left:130%" data-3700="left:130%" data-3900="left:75%;">
-    <h4>Not to mention some hidden gems</h4>
+  <div id="easing" data-0="left:140%" data-3700="left:140%" data-3900="left:75%;" style="text-align: right; padding-right: 50px; margin-left:-25%;">
+    <h4 style="color: #000;">Not to mention scrumptious Thai Fusion entrees.</h4>
   </div>
 </div>
 
-<%# Last photo %>
+<%# Last section %>
 
 <div id="foreground" data-5000="opacity:1;top:100%;transform-origin:0 0;" data-6000="opacity:1;top:15%;">
   <div class="enclosure">
-    <%# TODO: change these to buttons %>
-    <h1>How to get here</h1>
-    <h1>See the menu</h1>
   </div>
 </div>
+
+<%# Last section links that fly in %>
+
+<div id="easing-last1" data-0="left:-50%" data-4400="left:-50%" data-5500="left:75%;">
+  <h4 class="final" style="color: #000; margin: 0.5em 0em;"><%= link_to "How to Get Here", contact_path, style: "padding-left: 40px; padding-right: 49px;" %></h4>
+</div>
+
+<div id="easing-last2" data-0="left:180%" data-4700="left:180%" data-5500="left:75%;">
+  <h4 class="final" style="color: #000; margin: 0.5em 0em;"><%= link_to "Lunch Menu", lunch_path, style: "padding-left: 58px; padding-right: 73px;"  %></h4>
+</div>
+
+<div id="easing-last3" data-0="left:-50%" data-5100="left:-50%" data-5500="left:75%;">
+  <h4 class="final" style="color: #000; margin: 0.5em 0em;"><%= link_to "Dinner Menu", dinner_path, style: "padding-left: 58px; padding-right: 71px;" %></h4>
+</div>
+
 
 
 
 <%= javascript_include_tag "skrollr.min.js" %>
-
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="../skrollr-ie/dist/skrollr.ie.min.js"></script>
