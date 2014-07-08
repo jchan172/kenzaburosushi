@@ -193,13 +193,15 @@ body {
 
 
   .container.navbar-wrapper {
-    margin-top: 11px;
     margin-bottom: 0;
     width: auto;
   }
   .navbar-inner {
     border-radius: 0;
     margin: -10px -10px;
+  }
+  .navbar-toggle {
+    margin-top: 13px
   }
 }
 
