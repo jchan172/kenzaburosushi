@@ -367,12 +367,12 @@ h4 {
   }
 
   #entree {
-    background-image: image-url('entree.jpg');
+    background-image: asset-data-url('entree.jpg');
     background-size: auto 80vh;
   }
 
   #fusion {
-    background-image: image-url('fusion.jpg');
+    background-image: asset-data-url('fusion.jpg');
     background-size: auto 80vh;
   }
 
