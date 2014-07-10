@@ -315,7 +315,7 @@ h4 {
     left:0;
     width:100%;
     height:100%;
-    background:image-url('background.jpg');
+    background:asset-data-url('background.jpg');
     background-size: auto 130vh;
     background-position: center;
   }
@@ -351,18 +351,18 @@ h4 {
   }
 
   #sushi {
-    background-image: image-url('sushi.jpg');
+    background-image: asset-data-url('sushi.jpg');
     background-size: auto 80vh;
   }
 
   #maki {
-    background-image: image-url('maki.jpg');
+    background-image: asset-data-url('maki.jpg');
     background-size: auto 80vh;
     background-position: 10% 85%;
   }
 
   #bento {
-    background-image: image-url('bento.jpg');
+    background-image: asset-data-url('bento.jpg');
     background-size: auto 80vh;
   }
 
