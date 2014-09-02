@@ -28,4 +28,7 @@ class SessionsController < ApplicationController
 		redirect_to root_url # redirect to home page (uses standard rails method)
 	end
 
+	def password
+	end
+
 end

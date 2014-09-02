@@ -21,10 +21,11 @@ ScratchCms::Application.routes.draw do
   match '/order' => 'pages#order',       via: 'get'
 
   # Scratch CMS
-  match '/signup' => 'users#new',        via: 'get'
-  match '/login' => 'sessions#new',      via: 'get'
-  match '/logout' => 'sessions#destroy', via: 'delete'
-  match '/dashboard' => 'users#show',    via: 'get'
+  match '/signup' => 'users#new',         via: 'get'
+  match '/login' => 'sessions#new',       via: 'get'
+  match '/logout' => 'sessions#destroy',  via: 'delete'
+  match '/forgot' => 'sessions#password', via: 'get'
+  match '/dashboard' => 'users#show',     via: 'get'
   match '/blogs/:id/manage' => 'blogs#manage',    via: 'get'
 
   # The priority is based upon order of creation:
