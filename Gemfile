@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.0.0'
 gem 'jquery-rails', '3.0.4' # incorporate jquery
-gem 'bootstrap-sass', '3.0.3.0' # Twitter Bootstrap for frontend
-gem 'sass-rails' # integration for sass (frontend stylesheet stuff)
+gem 'bootstrap-sass', '2.3.0.1' # Twitter Bootstrap for frontend
+gem 'sass-rails', '~> 4.0.3' # integration for sass (frontend stylesheet stuff)
 gem 'coffee-rails' # compiles coffeescript
 gem 'uglifier' # used for minifying javascript
 gem 'turbolinks' # turbolinks makes apps appear faster by replacing HTML instead of full reload
@@ -22,11 +21,10 @@ gem 'jbuilder' # gives simple language for declaring JSON structures
 # gem 'smusher' # lossless reduction of images
 gem 'newrelic_rpm' # Heroku add-on for analytics
 gem 'rename' # allows you to rename the Rails project. simply run 'rails g rename:app_to <insert new name>'
-gem 'sprockets', '2.11.0' #trying something as a fix in gemfile
+
 
 # these gems used both in development and testing
 group :development, :test do
-  gem 'thin'
 	# gem 'sqlite3', '1.3.5' # use sqlite for our development database
 	gem 'rspec-rails', '2.11.0' # use rspec as our testing platform
 	gem 'better_errors' # better interface for showing errors
@@ -39,23 +37,15 @@ end
 
 # i don't always test my code, but when i do, i do it in production
 group :test do
-	gem 'cucumber-rails', '1.3.0', :require => false # more testing tools
-	gem 'database_cleaner', github: 'bmabey/database_cleaner' # not required but highly recommended by makers of cucumber
+	gem 'cucumber-rails', '1.3.0'# more testing tools
+	gem 'database_cleaner' # not required but highly recommended by makers of cucumber
 	gem 'capybara' # allows us to easily navigate to a page, click links, fill out forms, submit forms, and check the contents of web pages for items during testing
 	gem 'factory_girl_rails' # easy way to create user during testing
 end
 
-# Gems only used for production.
-group :production do
-  gem 'rails_12factor', '0.0.2'             # Used by Heroku to serve static assets such as images and stylesheets.
-  # if using Amazon RDS, uncoomment the two lines below and set up Amazon RDS add-on (look at Heroku documentation)
-  # gem 'mysql2'                            # MySQL connector
-  # gem 'mysql', '2.9.1'                      # Our production database is mysql on Amazon RDS.
-end
-
 # Gems only used for documentation
 group :doc do
-  gem 'sdoc', '0.3.20', require: false
+  gem 'sdoc', '0.3.20'
 end
 
 
