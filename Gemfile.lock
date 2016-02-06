@@ -87,10 +87,6 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     kgio (2.9.2)
-    localtunnel (0.3)
-      json (>= 1.2.4)
-      net-ssh (>= 2.0.22)
-      net-ssh-gateway (>= 1.0.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -103,9 +99,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.0)
     multi_test (0.1.1)
-    net-ssh (2.9.0)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
     newrelic_rpm (3.8.0.218)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -206,7 +199,6 @@ DEPENDENCIES
   hirb
   jbuilder
   jquery-rails (= 3.0.4)
-  localtunnel
   meta_request
   newrelic_rpm
   pg
@@ -221,3 +213,6 @@ DEPENDENCIES
   uglifier
   unicorn
   will_paginate
+
+BUNDLED WITH
+   1.11.2
