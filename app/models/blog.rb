@@ -10,7 +10,7 @@
 #  user_id    :integer
 #
 
-class Blog < ActiveRecord::Base
+class Blog < ApplicationRecord
   belongs_to :user
   has_many :blogentries, dependent: :destroy
 

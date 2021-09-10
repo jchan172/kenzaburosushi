@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #
 
-class Custompage < ActiveRecord::Base
+class Custompage < ApplicationRecord
   belongs_to :user
   
   validates :content, presence: true, length: {maximum: 500}

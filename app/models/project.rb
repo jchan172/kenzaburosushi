@@ -10,12 +10,12 @@
 #  user_id    :integer
 #
 
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   belongs_to :user
 
   validates :content, presence: true
   validates :title, presence: true
   validates :user_id, presence: true
 
-  default_scope order: 'projects.created_at DESC'
+  default_scope { order('projects.created_at DESC') }
 end
