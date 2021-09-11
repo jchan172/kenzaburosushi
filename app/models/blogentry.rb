@@ -17,5 +17,5 @@ class Blogentry < ApplicationRecord
   validates :content, presence: true
   validates :title, presence: true
 
-  default_scope order: 'blogentries.created_at DESC'
+  default_scope { order('created_at DESC') }
 end
