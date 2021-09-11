@@ -15,7 +15,7 @@
 
 require 'securerandom'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :projects, dependent: :destroy
   has_many :blogs, dependent: :destroy
   has_many :custompages, dependent: :destroy

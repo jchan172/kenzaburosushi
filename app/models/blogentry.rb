@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #
 
-class Blogentry < ActiveRecord::Base
+class Blogentry < ApplicationRecord
   belongs_to :blog
 
   validates :blog_id, presence: true
