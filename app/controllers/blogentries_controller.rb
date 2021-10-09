@@ -17,7 +17,7 @@ class BlogentriesController < ApplicationController
 
   def update
     @blogentry = Blogentry.find(params[:id])
-    if @blogentry.update_attributes(blogentry_params)
+    if @blogentry.update(blogentry_params)
       flash[:success] = "Blog entry updated!"
       redirect_to dashboard_path
     else

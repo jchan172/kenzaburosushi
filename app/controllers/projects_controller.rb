@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    if @project.update_attributes(project_params)
+    if @project.update(project_params)
       flash[:success] = "Project updated!"
       redirect_to dashboard_path
     else

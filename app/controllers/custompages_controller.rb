@@ -22,7 +22,7 @@ class CustompagesController < ApplicationController
 
   def update
     @custompage = Custompage.find(params[:id])
-    if @custompage.update_attributes(custompage_params)
+    if @custompage.update(custompage_params)
       flash[:success] = "Custom Category page updated!"
       redirect_to dashboard_path
     else
